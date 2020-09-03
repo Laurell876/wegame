@@ -1,0 +1,102 @@
+[
+    {
+        "Title": "God of War",
+        "PictureUrl": "images/videogames/godofwar.jpg",
+        "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "ReleaseYear": 2020,
+        "Rating": 3,
+        "Price": 60,
+        "Genre":"Action",
+        "PublisherId":1,
+        "DeveloperId":1
+    },
+    {
+        "Title": "Call of Duty: Modern Warfare 2",
+        "PictureUrl": "images/videogames/codmw2.jpg",
+        "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "ReleaseYear": 2009,
+        "Rating": 4,
+        "Price": 60,
+        "Genre":"FPS",
+        "PublisherId":1,
+        "DeveloperId":2
+    },
+    {
+        "Title": "Metal Gear Solid V: The Phantom Pain",
+        "PictureUrl": "images/videogames/mgsv.jpg",
+        "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "ReleaseYear": 2015,
+        "Rating": 5,
+        "Price": 60,
+        "Genre":"Stealth",
+        "PublisherId":1,
+        "DeveloperId":3
+    },
+    {
+        "Title": "Portal 2",
+        "PictureUrl": "images/videogames/portal2.jpg",
+        "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "ReleaseYear": 2011,
+        "Rating": 4,
+        "Price": 60,
+        "Genre":"Stealth",
+        "PublisherId":2,
+        "DeveloperId":1
+    },
+    {
+        "Title": "The Last of Us",
+        "PictureUrl": "images/videogames/tlou.jpg",
+        "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "ReleaseYear": 2013,
+        "Rating": 4,
+        "Price": 60,
+        "Genre":"Stealth",
+        "PublisherId":2,
+        "DeveloperId":2
+    },
+    {
+        "Title": "Red Dead Redemption",
+        "PictureUrl": "images/videogames/rdr.jpg",
+        "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "ReleaseYear": 2010,
+        "Rating": 5,
+        "Price": 60,
+        "Genre":"Stealth",
+        "PublisherId":2,
+        "DeveloperId":3
+    },
+    {
+        "Title": "Mass Effect 2",
+        "PictureUrl": "images/videogames/me2.jpg",
+        "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "ReleaseYear": 2012,
+        "Rating": 4,
+        "Price": 60,
+        "Genre":"Stealth",
+        "PublisherId":3,
+        "DeveloperId":1
+    },
+    {
+        "Title": "Batman: Arkham City",
+        "PictureUrl": "images/videogames/batman.jpg",
+        "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "ReleaseYear": 2012,
+        "Rating": 4,
+        "Price": 60,
+        "Genre":"Stealth",
+        "PublisherId":3,
+        "DeveloperId":2
+    },
+    {
+        "Title": "Super Mario Odyssey",
+        "PictureUrl": "images/videogames/mario.jpg",
+        "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "ReleaseYear": 2020,
+        "Rating": 5,
+        "Price": 60,
+        "Genre":"Stealth",
+        "PublisherId":3,
+        "DeveloperId":3
+    }
+    
+]
