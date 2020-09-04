@@ -1,4 +1,21 @@
-<h1>{{title}}</h1>
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+<div
+  class="d-flex flex-column justify-content-between flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm"
+>
+  <img src="/assets/images/logo.png" alt="logo" style="max-height: 70px; cursor:pointer" />
+  <nav class="my-2 my-md-0 mr-md-3 text-uppercase">
+    <a mat-button href="#" target="_blank">Home</a>
+    <a mat-button href="#" target="_blank">Shop</a>
+    <a mat-button href="#" target="_blank">Contact</a>
+  </nav>
+  <div class="d-flex align-items-center">
+    <a class="position-relative">
+        <mat-icon aria-hidden="false" aria-label="Example shopping_cart icon" class="mr-2">shopping_cart</mat-icon>
+        <div class="cart-no">5</div>
+    </a>
+    <button mat-stroked-button color="primary" class="remove-focus mr-2">
+      Sign up
+    </button>
+    <button mat-flat-button color="primary" class="remove-focus">Login</button>
+  </div>
+</div>
 
-<div class="container">Test</div>
