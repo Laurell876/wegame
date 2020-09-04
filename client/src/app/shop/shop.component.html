@@ -1,28 +1,69 @@
 <div class="container">
   <div class="row">
-    <section class="col-4">filters</section>
-    <section class="col-8">
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-4 mb-5" *ngFor="let videoGame of videoGames">
-          <mat-card class="h-100">
-            <img src="{{ videoGame.pictureUrl }}" style="height: 150px" mat-card-image />
-            <mat-card-title>{{ videoGame.title }}</mat-card-title>
-            <mat-card-subtitle class="mb-0">{{
-              videoGame.price | currency
-            }}</mat-card-subtitle>
-            <mat-card-subtitle class="mb-0">{{
-              videoGame.releaseYear
-            }}</mat-card-subtitle>
-            <mat-card-subtitle class="mb-0">Developer: {{ videoGame.developer }}</mat-card-subtitle>
-            <mat-card-subtitle class="mb-0">Publisher: {{ videoGame.publisher }}</mat-card-subtitle>
 
-            <mat-card-actions>
-              <button mat-button color="primary" class="remove-focus">View</button>
-              <button mat-button color="primary" class="remove-focus">Edit</button>
-            </mat-card-actions>
-          </mat-card>
+
+
+    <section class="col-sm-5 col-md-4 col-lg-3">
+      <h2 class="ml-3 my-0">Sort</h2>
+      <mat-form-field appearance="fill">
+        <mat-label>Sort By</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let option of sortingOptions" [value]="option.name"
+            (click)="onSortSelected(option.value)">
+            {{option.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+
+      <h2 class="ml-3 my-0">Developers</h2>
+      <mat-action-list>
+        <button mat-list-item *ngFor="let developer of developers"
+          [class.active]="developer.id === this.shopParams.developerId" [value]="developer.id"
+          (click)="onDeveloperSelected(developer.id)">
+          {{developer.name}}
+        </button>
+      </mat-action-list>
+      <h2 class="ml-3 my-0">Publishers</h2>
+      <mat-action-list>
+        <button mat-list-item *ngFor="let publisher of publishers"
+          [class.active]="publisher.id === this.shopParams.publisherId" [value]="publisher.id"
+          (click)="onPublisherSelected(publisher.id)">
+          {{publisher.name}}
+        </button>
+      </mat-action-list>
+
+
+    </section>
+
+
+
+
+    <section class="col-sm-7 col-md-8 col-lg-9">
+      <div class="d-flex justify-content-between align-items-center pb-2">
+
+
+        <div class="form-inline mt-2">
+          <input type="text" style="width: 200px;" placeholder="Search" class="form-control">
+          <button mat-stroked-button color="primary" class="remove-focus mr-2 ml-2">Search</button>
+          <button mat-stroked-button color="primary" class="remove-focus">Reset</button>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-5" *ngFor="let videoGame of videoGames">
+          <app-product-item [videoGame]="videoGame"></app-product-item>
+        </div>
+      </div>
+      <mat-paginator (page)="onPageChanged($event)" [length]="totalCount" [pageSize]="shopParams.pageSize" >
+      </mat-paginator>
+
+
     </section>
+
+
+
+
   </div>
 </div>
