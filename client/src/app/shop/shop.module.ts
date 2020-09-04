@@ -8,7 +8,10 @@ import {MatListModule} from '@angular/material/list';
 import {MatSelectModule} from '@angular/material/select';
 import { ProductItemComponent } from './product-item/product-item.component';
 import {MatIconModule} from '@angular/material/icon';
-import {MatPaginatorModule} from '@angular/material/paginator'; 
+import {MatInputModule} from '@angular/material/input';
+
+
+import {MatBadgeModule} from '@angular/material/badge'; 
 
 @NgModule({
   declarations: [ShopComponent, ProductItemComponent],
@@ -20,7 +23,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSelectModule,
     MatIconModule,
     SharedModule,
-    MatPaginatorModule
+    MatInputModule
   ],
   exports: [
     ShopComponent

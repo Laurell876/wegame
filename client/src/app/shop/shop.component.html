@@ -36,19 +36,22 @@
 
 
     </section>
-
-
-
-
     <section class="col-sm-7 col-md-8 col-lg-9">
-      <div class="d-flex justify-content-between align-items-center pb-2">
-
+      <div class="d-flex justify-content-end align-items-center pb-2">
 
         <div class="form-inline mt-2">
-          <input type="text" style="width: 200px;" placeholder="Search" class="form-control">
-          <button mat-stroked-button color="primary" class="remove-focus mr-2 ml-2">Search</button>
-          <button mat-stroked-button color="primary" class="remove-focus">Reset</button>
+
+          <form class="example-form">
+          <mat-form-field style="width:150px;" class="example-full-width">
+            <mat-label>Search</mat-label>
+            <input #search matInput placeholder="Ex. Mario">
+          </mat-form-field>
+          </form>
+
         </div>
+                  
+        <button (click)="onSearch()" mat-stroked-button color="primary" class="remove-focus mr-2 ml-2 d-flex justify-content-center">Search</button>
+        <button (click)="onReset()" mat-stroked-button color="primary" class="remove-focus">Reset</button>
       </div>
 
       <div class="row">
@@ -56,8 +59,12 @@
           <app-product-item [videoGame]="videoGame"></app-product-item>
         </div>
       </div>
-      <mat-paginator (page)="onPageChanged($event)" [length]="totalCount" [pageSize]="shopParams.pageSize" >
-      </mat-paginator>
+
+      <app-pager
+        [pageSize]="shopParams.pageSize"
+        [totalCount]="totalCount"
+        (pageChangedEmitter)="onPageChanged($event)"
+      ></app-pager>
 
 
     </section>

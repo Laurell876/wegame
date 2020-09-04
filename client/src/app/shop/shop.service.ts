@@ -29,6 +29,10 @@ export class ShopService {
       params = params.append('publisherId', shopParams.publisherId.toString());
     }
 
+    if (shopParams.search) {
+      params = params.append('search', shopParams.search);
+    }
+
     params = params.append('sort', shopParams.sort);
     params = params.append('pageIndex', shopParams.pageIndex.toString());
     params = params.append('pageSize', shopParams.pageSize.toString());
