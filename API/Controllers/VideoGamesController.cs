@@ -31,5 +31,17 @@ namespace API.Controllers
             return Ok(await _repo.GetVideoGameByIdAsync(id));
         }
 
+        [HttpGet("developers")]
+        public async Task<ActionResult<IReadOnlyList<Developer>>> GetDevelopers()
+        {
+            return Ok(await _repo.GetDevelopersAsync());
+        }
+
+        [HttpGet("publishers")]
+        public async Task<ActionResult<IReadOnlyList<Developer>>> GetPublishers()
+        {
+            return Ok(await _repo.GetPublishersAsync());
+        }
+
     }
 }

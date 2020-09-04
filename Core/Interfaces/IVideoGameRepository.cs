@@ -8,5 +8,7 @@ namespace Core.Interfaces
     {
         Task<VideoGame> GetVideoGameByIdAsync(int id);
         Task<IReadOnlyList<VideoGame>> GetVideoGamesAsync();
+        Task<IReadOnlyList<Developer>> GetDevelopersAsync();
+        Task<IReadOnlyList<Publisher>> GetPublishersAsync();
     }
 }

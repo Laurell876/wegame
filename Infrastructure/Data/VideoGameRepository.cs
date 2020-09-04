@@ -23,5 +23,15 @@ namespace Infrastructure.Data
         {
             return await _context.VideoGames.ToListAsync();
         }
+        
+        public async Task<IReadOnlyList<Developer>> GetDevelopersAsync()
+        {
+            return await _context.Developers.ToListAsync();
+        }
+
+        public async Task<IReadOnlyList<Publisher>> GetPublishersAsync()
+        {
+            return await _context.Publishers.ToListAsync();
+        }
     }
 }
