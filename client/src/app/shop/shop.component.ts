@@ -74,11 +74,13 @@ export class ShopComponent implements OnInit {
 
   onDeveloperSelected(developerId: number): void {
     this.shopParams.developerId = developerId;
+    this.shopParams.pageIndex = 1;
     this.getVideoGames();
   }
 
   onPublisherSelected(publisherId: number): void {
     this.shopParams.publisherId = publisherId;
+    this.shopParams.pageIndex = 1;
     this.getVideoGames();
   }
 
