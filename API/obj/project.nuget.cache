@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1XH5xPJ0lxAJLFOwP6n6YOoVJQE8uKOQCLXwjZ/lretOf7ZDcLRMmRdlNIEH16nD+yGjIWZdAwhxnUDs0lW4Tg==",
+  "dgSpecHash": "E3NIR85KX+VSVDteEbVtm51RwXeaK2e0tky+nTbttFYv5AwuGrNcAQDoeewShHj78SRoIA71oiF0uosG1i2i7g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Laurell Seville\\Dev\\wegame\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -30,10 +30,14 @@
     "C:\\Users\\Laurell Seville\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.7\\microsoft.extensions.logging.abstractions.3.1.7.nupkg.sha512",
     "C:\\Users\\Laurell Seville\\.nuget\\packages\\microsoft.extensions.options\\3.1.7\\microsoft.extensions.options.3.1.7.nupkg.sha512",
     "C:\\Users\\Laurell Seville\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.7\\microsoft.extensions.primitives.3.1.7.nupkg.sha512",
+    "C:\\Users\\Laurell Seville\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
     "C:\\Users\\Laurell Seville\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.2\\sqlitepclraw.bundle_e_sqlite3.2.0.2.nupkg.sha512",
     "C:\\Users\\Laurell Seville\\.nuget\\packages\\sqlitepclraw.core\\2.0.2\\sqlitepclraw.core.2.0.2.nupkg.sha512",
     "C:\\Users\\Laurell Seville\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.2\\sqlitepclraw.lib.e_sqlite3.2.0.2.nupkg.sha512",
     "C:\\Users\\Laurell Seville\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.2\\sqlitepclraw.provider.dynamic_cdecl.2.0.2.nupkg.sha512",
+    "C:\\Users\\Laurell Seville\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.5.1\\swashbuckle.aspnetcore.swagger.5.5.1.nupkg.sha512",
+    "C:\\Users\\Laurell Seville\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.5.1\\swashbuckle.aspnetcore.swaggergen.5.5.1.nupkg.sha512",
+    "C:\\Users\\Laurell Seville\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.5.1\\swashbuckle.aspnetcore.swaggerui.5.5.1.nupkg.sha512",
     "C:\\Users\\Laurell Seville\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\Laurell Seville\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\Laurell Seville\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
