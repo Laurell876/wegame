@@ -1,15 +1,21 @@
-<p>
-    <mat-toolbar color="primary">
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span>My App</span>
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-      </button>
-    </mat-toolbar>
-  </p>
+<div
+  class="d-flex flex-column justify-content-between flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm"
+>
+  <img src="/assets/images/logo.png" alt="logo" style="max-height: 70px; cursor:pointer" />
+  <nav class="my-2 my-md-0 mr-md-3 text-uppercase">
+    <a mat-button href="#" target="_blank">Home</a>
+    <a mat-button href="#" target="_blank">Shop</a>
+    <a mat-button href="#" target="_blank">Contact</a>
+  </nav>
+  <div class="d-flex align-items-center">
+    <a class="position-relative">
+        <mat-icon aria-hidden="false" aria-label="Example shopping_cart icon" class="mr-2">shopping_cart</mat-icon>
+        <div class="cart-no">5</div>
+    </a>
+    <button mat-stroked-button color="primary" class="remove-focus mr-2">
+      Sign up
+    </button>
+    <button mat-flat-button color="primary" class="remove-focus">Login</button>
+  </div>
+</div>
+
