@@ -1,8 +1,30 @@
-
 <div class="container">
-    <ul>
-      <li class="list-unstyled" *ngFor="let videoGame of videoGames">
-          {{videoGame.title}}
-      </li>
-    </ul>
+  <div class="row">
+    <section class="col-4">filters</section>
+    <section class="col-8">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-5" *ngFor="let videoGame of videoGames">
+          <mat-card class="h-100">
+            <img src="{{ videoGame.pictureUrl }}" style="height: 150px" mat-card-image />
+            <mat-card-title>{{ videoGame.title }}</mat-card-title>
+            <mat-card-subtitle class="mb-0">{{
+              videoGame.price | currency
+            }}</mat-card-subtitle>
+            <mat-card-subtitle class="mb-0">{{
+              videoGame.releaseYear
+            }}</mat-card-subtitle>
+            <mat-card-subtitle class="mb-0">Developer: {{ videoGame.developer }}</mat-card-subtitle>
+            <mat-card-subtitle class="mb-0">Publisher: {{ videoGame.publisher }}</mat-card-subtitle>
+            <mat-card-content class="mb-0">{{
+              videoGame.description
+            }}</mat-card-content>
+            <mat-card-actions>
+              <button mat-button color="primary" class="remove-focus">View</button>
+              <button mat-button color="primary" class="remove-focus">Edit</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </section>
   </div>
+</div>
