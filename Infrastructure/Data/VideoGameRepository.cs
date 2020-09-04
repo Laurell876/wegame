@@ -16,12 +16,16 @@ namespace Infrastructure.Data
 
         public async Task<VideoGame> GetVideoGameByIdAsync(int id)
         {
-            return await _context.VideoGames.FindAsync(id);
+            return await _context.VideoGames
+            .Include(g => g.Developer)
+            .Include(g => g.Publisher)
+            .FirstOrDefaultAsync(g => g.Id == id);
         }
 
         public async Task<IReadOnlyList<VideoGame>> GetVideoGamesAsync()
         {
-            return await _context.VideoGames.ToListAsync();
+            return await _context.VideoGames
+            .ToListAsync();
         }
         
         public async Task<IReadOnlyList<Developer>> GetDevelopersAsync()
