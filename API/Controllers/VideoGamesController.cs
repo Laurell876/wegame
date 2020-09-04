@@ -11,6 +11,7 @@ using API.Dtos;
 using AutoMapper;
 using API.Errors;
 using Microsoft.AspNetCore.Http;
+using API.Helpers;
 
 namespace API.Controllers
 {
@@ -35,12 +36,19 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<VideoGameToReturnDto>>> GetVideoGames()
+        public async Task<ActionResult<Pagination<VideoGameToReturnDto>>> GetVideoGames([FromQuery]VideoGameSpecParams videoGameParams)
         {
-            var spec = new VideoGamesWithDevelopersAndPublishersSpecifications();
+            var spec = new VideoGamesWithDevelopersAndPublishersSpecifications(videoGameParams);
+
+            var countSpec = new VideoGameWithFiltersForCountSpecification(videoGameParams);
+
+            var totalItems = await _videoGameRepo.CountAsync(countSpec);
+
             var videoGames = await _videoGameRepo.ListAsync(spec);
+
+            var data = mapper.Map<IReadOnlyList<VideoGame>, IReadOnlyList<VideoGameToReturnDto>>(videoGames);
             
-            return Ok(mapper.Map<IReadOnlyList<VideoGame>, IReadOnlyList<VideoGameToReturnDto>>(videoGames));
+            return Ok(new Pagination<VideoGameToReturnDto>(videoGameParams.PageIndex, videoGameParams.PageSize, totalItems, data));
         }
 
         [HttpGet("{id}")]

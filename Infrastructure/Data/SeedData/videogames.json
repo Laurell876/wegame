@@ -16,7 +16,7 @@
         "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
         "ReleaseYear": 2009,
         "Rating": 4,
-        "Price": 60,
+        "Price": 30,
         "Genre":"FPS",
         "PublisherId":1,
         "DeveloperId":2
@@ -27,7 +27,7 @@
         "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
         "ReleaseYear": 2015,
         "Rating": 5,
-        "Price": 60,
+        "Price": 25,
         "Genre":"Stealth",
         "PublisherId":1,
         "DeveloperId":3
@@ -37,8 +37,8 @@
         "PictureUrl": "images/videogames/portal2.jpg",
         "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
         "ReleaseYear": 2011,
-        "Rating": 4,
-        "Price": 60,
+        "Rating": 2,
+        "Price": 25,
         "Genre":"Stealth",
         "PublisherId":2,
         "DeveloperId":1
@@ -48,8 +48,8 @@
         "PictureUrl": "images/videogames/tlou.jpg",
         "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
         "ReleaseYear": 2013,
-        "Rating": 4,
-        "Price": 60,
+        "Rating": 1,
+        "Price": 75,
         "Genre":"Stealth",
         "PublisherId":2,
         "DeveloperId":2
@@ -59,8 +59,8 @@
         "PictureUrl": "images/videogames/rdr.jpg",
         "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
         "ReleaseYear": 2010,
-        "Rating": 5,
-        "Price": 60,
+        "Rating": 3,
+        "Price": 36,
         "Genre":"Stealth",
         "PublisherId":2,
         "DeveloperId":3
@@ -70,8 +70,8 @@
         "PictureUrl": "images/videogames/me2.jpg",
         "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
         "ReleaseYear": 2012,
-        "Rating": 4,
-        "Price": 60,
+        "Rating": 1,
+        "Price": 48,
         "Genre":"Stealth",
         "PublisherId":3,
         "DeveloperId":1
@@ -81,8 +81,8 @@
         "PictureUrl": "images/videogames/batman.jpg",
         "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
         "ReleaseYear": 2012,
-        "Rating": 4,
-        "Price": 60,
+        "Rating": 2,
+        "Price": 50,
         "Genre":"Stealth",
         "PublisherId":3,
         "DeveloperId":2
@@ -93,7 +93,7 @@
         "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
         "ReleaseYear": 2020,
         "Rating": 5,
-        "Price": 60,
+        "Price": 25,
         "Genre":"Stealth",
         "PublisherId":3,
         "DeveloperId":3
