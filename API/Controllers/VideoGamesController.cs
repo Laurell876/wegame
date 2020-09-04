@@ -12,9 +12,7 @@ using AutoMapper;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class VideoGamesController : ControllerBase
+    public class VideoGamesController : BaseApiController
     {
         private readonly IGenericRepository<VideoGame> _videoGameRepo;
         private readonly IGenericRepository<Developer> _developerRepo;
