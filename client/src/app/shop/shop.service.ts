@@ -1,3 +1,4 @@
+import { IVideoGame } from './../shared/models/videogame';
 import { ShopParams } from './../shared/models/shopParams';
 import { IPublisher } from './../shared/models/publisher';
 import { IDeveloper } from './../shared/models/developer';
@@ -43,6 +44,10 @@ export class ShopService {
           return response.body;
         })
       );
+  }
+
+  getVideoGame(id: number): Observable<IVideoGame> {
+    return this.http.get<IVideoGame>(this.baseUrl + 'videogames/' + id);
   }
 
   getDevelopers(): Observable<IDeveloper[]> {

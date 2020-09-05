@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,12 +10,10 @@ import {MatSelectModule} from '@angular/material/select';
 import { ProductItemComponent } from './product-item/product-item.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
-
-
-import {MatBadgeModule} from '@angular/material/badge'; 
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
-  declarations: [ShopComponent, ProductItemComponent],
+  declarations: [ShopComponent, ProductItemComponent, ProductDetailsComponent],
   imports: [
     CommonModule,
     MatCardModule,
@@ -23,7 +22,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatSelectModule,
     MatIconModule,
     SharedModule,
-    MatInputModule
+    MatInputModule,
+    RouterModule
   ],
   exports: [
     ShopComponent

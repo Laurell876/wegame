@@ -1,4 +1,4 @@
-import { NavBarModule } from './core/nav-bar/nav-bar.module';
+import { HomeModule } from './home/home.module';
 import { ShopModule } from './shop/shop.module';
 import { CoreModule } from './core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     CoreModule,
     ShopModule,
-    NavBarModule
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
