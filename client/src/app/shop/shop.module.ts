@@ -1,3 +1,4 @@
+import { ShopRoutingModule } from './shop-routing.module';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
@@ -23,10 +24,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     MatIconModule,
     SharedModule,
     MatInputModule,
-    RouterModule
-  ],
-  exports: [
-    ShopComponent
+    ShopRoutingModule
   ]
 })
 export class ShopModule { }
