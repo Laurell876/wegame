@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    <button mat-stroked-button color="primary" class="remove-focus mr-3" (click)="get500Error()">Test 500 Error</button>
+
+    <button mat-stroked-button color="primary" class="remove-focus mr-3" (click)="get404Error()">Test 404 Error</button>
+
+    <button mat-stroked-button color="primary" class="remove-focus mr-3" (click)="get400Error()">Test 400 Error</button>
+
+    <button mat-stroked-button color="primary" class="remove-focus mr-3" (click)="get400ValidationError()">Test 400 Validation Error</button>
+
+    <div class="row mt-5" *ngIf="validationErrors">
+        <ul class="text-danger">
+            <li *ngFor="let error of validationErrors">{{error}}</li>
+        </ul>
+    </div>
+</div>
