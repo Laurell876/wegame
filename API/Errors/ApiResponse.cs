@@ -15,7 +15,7 @@ namespace API.Errors
         private string GetDefaultMessageForStatusCode(int statusCode)
         {
             return statusCode switch{
-                400 => "A Bad Request, you had made.",
+                400 => "A Bad Request, you have made.",
                 401 => "Authorized, you are not",
                 404 => "Found, this resource was not",
                 500 => "Errors are the path to the dark side. Errors lead to anger. Anger leads to hate. Hate leads to career change.",

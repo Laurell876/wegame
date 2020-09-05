@@ -1,10 +1,12 @@
-<div class="container">
+
   <div class="row">
 
 
 
     <section class="col-sm-5 col-md-4 col-lg-3">
-      <h2 class="ml-3 my-0">Sort</h2>
+      <ng-container *ngIf="developers && publishers">
+
+      <h2 class="my-0">Sort</h2>
       <mat-form-field appearance="fill">
         <mat-label>Sort By</mat-label>
         <mat-select>
@@ -17,7 +19,7 @@
 
 
 
-      <h2 class="ml-3 my-0">Developers</h2>
+      <h2 class="my-0">Developers</h2>
       <mat-action-list>
         <button mat-list-item *ngFor="let developer of developers"
           [class.active]="developer.id === this.shopParams.developerId" [value]="developer.id"
@@ -25,7 +27,7 @@
           {{developer.name}}
         </button>
       </mat-action-list>
-      <h2 class="ml-3 my-0">Publishers</h2>
+      <h2 class="my-0">Publishers</h2>
       <mat-action-list>
         <button mat-list-item *ngFor="let publisher of publishers"
           [class.active]="publisher.id === this.shopParams.publisherId" [value]="publisher.id"
@@ -33,11 +35,13 @@
           {{publisher.name}}
         </button>
       </mat-action-list>
-
+    </ng-container>
 
     </section>
     <section class="col-sm-7 col-md-8 col-lg-9">
-      <div class="d-flex justify-content-end align-items-center pb-2">
+
+
+      <div *ngIf="videoGames" class="d-flex justify-content-center align-items-center pb-2">
 
         <div class="form-inline mt-2">
 
@@ -55,12 +59,13 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-4 mb-5" *ngFor="let videoGame of videoGames">
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-flex align-items-center justify-content-center" *ngFor="let videoGame of videoGames">
           <app-product-item [videoGame]="videoGame"></app-product-item>
         </div>
       </div>
 
       <app-pager
+      *ngIf="developers && publishers"
         [pageSize]="shopParams.pageSize"
         [totalCount]="totalCount"
         (pageChangedEmitter)="onPageChanged($event)"
@@ -73,4 +78,3 @@
 
 
   </div>
-</div>
