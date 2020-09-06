@@ -82,11 +82,11 @@
                                         <td class="align-middle">
                                             <div class="d-flex align-items-center">
                                                 <div class="add_to_cart">
-                                                    <button color="accent" mat-icon-button>
+                                                    <button (click)="incrementItemQuantity(item)" color="accent" mat-icon-button>
                                                         <mat-icon class="remove_focus">add</mat-icon>
                                                     </button>
                                                     <span class="mr-2 ml-2">{{item.quantity}}</span>
-                                                    <button color="accent" mat-icon-button>
+                                                    <button (click)="decrementItemQuantity(item)" color="accent" mat-icon-button>
                                                         <mat-icon class="remove_focus">remove</mat-icon>
                                                     </button>
                                                 </div>
@@ -98,7 +98,7 @@
                                         </td>
 
                                         <td class="align-middle text-center">
-                                            <button color="accent" mat-icon-button>
+                                            <button (click)="removeBasketItem(item)" color="accent" mat-icon-button>
                                                 <mat-icon class="remove_focus">delete</mat-icon>
                                             </button>
                                         </td>
