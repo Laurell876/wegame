@@ -1,0 +1,126 @@
+<div class="container mt-1">
+
+    <div *ngIf="(basket$ | async) === null">
+        <p>There are no items in your basket</p>
+    </div>
+
+    <div *ngIf="(basket$ | async) as basket">
+
+        <div class="pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 py-5 mb-1">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="border-0 bg-light" scope="col">
+                                            <div class="p-2 px-3 ">
+                                                Image
+                                            </div>
+                                        </th>
+                                        <th class="border-0 bg-light" scope="col">
+                                            <div class="p-2">
+                                                Title
+                                            </div>
+                                        </th>
+                                        <th class="border-0 bg-light" scope="col">
+                                            <div class="p-2">
+                                                Price
+                                            </div>
+                                        </th>
+                                        <th class="border-0 bg-light" scope="col">
+                                            <div class="p-2">
+                                                Quantity
+                                            </div>
+                                        </th>
+                                        <th class="border-0 bg-light" scope="col">
+                                            <div class="p-2">
+                                                Total
+                                            </div>
+                                        </th>
+                                        <th class="border-0 bg-light" scope="col">
+                                            <div class="p-2">
+                                                Remove
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of basket.items">
+
+
+                                        <th scope="row">
+                                            <div class="p-2">
+                                                <img style="max-height:200px;" src="{{item.pictureUrl}}"
+                                                    alt="{{item.videoGameTitle}}">
+                                            </div>
+                                        </th>
+
+
+                                        <td scope="row" class="align-middle">
+                                            <div>
+                                                <div class="d-inline-block ">
+                                                    <h3 class="mb-0">
+                                                        <a routerLink="/shop/{{item.id}}">
+                                                            {{item.videoGameTitle}}</a>
+                                                    </h3>
+                                                    <span
+                                                        class="text-muted font-weight-normal font-italic d-block">Developer:
+                                                        {{item.developer}}</span>
+                                                    <span
+                                                        class="text-muted font-weight-normal font-italic d-block">Publisher:
+                                                        {{item.publisher}}</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+
+                                        <td class="align-middle">
+                                            {{item.price | currency}}
+                                        </td>
+                                        <td class="align-middle">
+                                            <div class="d-flex align-items-center">
+                                                <div class="add_to_cart">
+                                                    <button color="accent" mat-icon-button>
+                                                        <mat-icon class="remove_focus">add</mat-icon>
+                                                    </button>
+                                                    <span class="mr-2 ml-2">{{item.quantity}}</span>
+                                                    <button color="accent" mat-icon-button>
+                                                        <mat-icon class="remove_focus">remove</mat-icon>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td class="align-middle">
+                                            {{item.price * item.quantity | currency}}
+                                        </td>
+
+                                        <td class="align-middle text-center">
+                                            <button color="accent" mat-icon-button>
+                                                <mat-icon class="remove_focus">delete</mat-icon>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <app-order-totals></app-order-totals>
+                        <div class="d-flex justify-content-center">
+                            <button routerLink="/checkout" mat-flat-button color="primary">Proceed to checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

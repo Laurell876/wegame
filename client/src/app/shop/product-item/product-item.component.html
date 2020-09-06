@@ -14,7 +14,8 @@
       <mat-card-subtitle class="mb-0">Publisher: {{ videoGame.publisher }}</mat-card-subtitle>
 
       <mat-card-actions>
-        <button mat-button class="remove-focus">
+        <button mat-button class="remove-focus" 
+        (click)="addItemToBasket()">
             <mat-icon 
             aria-hidden="false" 
             aria-label="Example shopping_cart icon" 

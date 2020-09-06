@@ -13,8 +13,8 @@
         <mat-icon aria-hidden="false" aria-label="Example shopping_cart icon" class="mr-2">shopping_cart</mat-icon>
         <div class="cart-no">5</div>
     </a> -->
-    <a>
-      <mat-icon matBadge="15" matBadgeColor="accent" class="mr-4">shopping_cart</mat-icon>
+    <a routerLink="/basket">
+      <mat-icon *ngIf="(basket$ | async) as basket" matBadge="{{basket.items.length}}" matBadgeColor="accent" class="mr-4">shopping_cart</mat-icon>
     </a>
     <button mat-stroked-button color="primary" class="remove-focus mr-2">
       Sign up
@@ -23,3 +23,4 @@
   </div>
 </div>
 
+ 

@@ -1,3 +1,4 @@
+import { BasketService } from './basket/basket.service';
 import { IPagination } from './shared/models/pagination';
 import { IVideoGame } from './shared/models/videogame';
 import { Component } from '@angular/core';
@@ -9,8 +10,17 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private http: HttpClient) {}
+  constructor(private basketService: BasketService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const basketId = localStorage.getItem('basket_id');
+    if (basketId) {
+      this.basketService.getBasket(basketId).subscribe(() => {
+        console.log('initialized basket');
+      }, error => {
+        console.log(error);
+      });
+    }
+  }
 
 }

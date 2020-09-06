@@ -1,0 +1,9 @@
+.remove-focus, .mat-icon-button, .mat-stroked-button {
+    outline: none;
+
+    &:focus {
+        outline: none;
+
+    }
+  }
+  
