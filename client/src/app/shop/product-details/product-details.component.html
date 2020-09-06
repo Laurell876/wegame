@@ -14,15 +14,15 @@
 
     <div class="add_to_cart_section mt-3 d-flex align-items-center flex-column">
         <div class="add_to_cart">
-            <button color="accent" mat-icon-button>
+            <button (click)="changeQuantity(true)" color="accent" mat-icon-button>
                 <mat-icon class="remove_focus">add</mat-icon>
             </button>
-            <span class="mr-2 ml-2">2</span>
-            <button color="accent" mat-icon-button>
+            <span class="mr-2 ml-2">{{this.quantity}}</span>
+            <button (click)="changeQuantity(false)" color="accent" mat-icon-button>
                 <mat-icon class="remove_focus">remove</mat-icon>
             </button>
         </div>
-        <button style="width:400px;" mat-flat-button color="primary" class="my-3">Add to Cart</button>
+        <button (click)="addItemToBasket()" style="width:400px;" mat-flat-button color="primary" class="my-3">Add to Cart</button>
     </div>
 
 
