@@ -1,6 +1,7 @@
 using API.Dtos;
 using AutoMapper;
 using Core.Entities;
+using Core.Entities.Identity;
 
 namespace API.Helpers
 {
@@ -13,6 +14,7 @@ namespace API.Helpers
             .ForMember(d => d.Publisher, o => o.MapFrom(s => s.Publisher.Name))
             .ForMember(d => d.PictureUrl, o => o.MapFrom<VideoGameUrlResolver>())
             ;
+            CreateMap<Address,AddressDto>().ReverseMap();
         }
     }
 }

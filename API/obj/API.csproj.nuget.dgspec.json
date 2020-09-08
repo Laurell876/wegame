@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Laurell Seville\\Dev\\wegame\\api\\API.csproj": {}
+    "C:\\Users\\Laurell Seville\\Dev\\wegame\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Laurell Seville\\Dev\\wegame\\api\\API.csproj": {
+    "C:\\Users\\Laurell Seville\\Dev\\wegame\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Laurell Seville\\Dev\\wegame\\api\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Laurell Seville\\Dev\\wegame\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Laurell Seville\\Dev\\wegame\\api\\API.csproj",
+        "projectPath": "C:\\Users\\Laurell Seville\\Dev\\wegame\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Laurell Seville\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Laurell Seville\\Dev\\wegame\\api\\obj\\",
+        "outputPath": "C:\\Users\\Laurell Seville\\Dev\\wegame\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Laurell Seville\\AppData\\Roaming\\NuGet\\NuGet.Config",

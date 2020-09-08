@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IMxb3ykNd/A2yGhRCnQ0RwlHWBGdrTOf8LOpuYXJrrYrnqvQvHVwYYXBl7vobuuC2HDTRlbJ7UOxABdDu8Xp3Q==",
+  "dgSpecHash": "t0a5x+qBbLhJus+nIFuQ7eKByBdPFRav2CEoWAD4vMoqxF5sYNOfXPxKfAhSN/0PzO81k/bYatNlNXRdq1syrA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Laurell Seville\\Dev\\wegame\\api\\API.csproj",
+  "projectFilePath": "C:\\Users\\Laurell Seville\\Dev\\wegame\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Laurell Seville\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\Laurell Seville\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
