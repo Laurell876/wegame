@@ -1,8 +1,11 @@
+using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using API.Dtos;
 using API.Errors;
 using Core.Entities.Identity;
 using Core.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,7 +18,7 @@ namespace API.Controllers
         private readonly ITokenService tokenService;
 
         public AccountController(
-            UserManager<AppUser> userManager, 
+            UserManager<AppUser> userManager,
             SignInManager<AppUser> signInManager,
             ITokenService tokenService
         )
@@ -24,6 +27,40 @@ namespace API.Controllers
             this.tokenService = tokenService;
             _userManager = userManager;
 
+        }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<ActionResult<UserDto>> GetCurrentUser()
+        {
+            // gets user's email from token
+            var email = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
+
+            var user = await _userManager.FindByEmailAsync(email);
+
+            return new UserDto
+            {
+                DisplayName = user.DisplayName,
+                Email = user.Email,
+                Token = tokenService.CreateToken(user)
+            };
+        }
+
+        [HttpGet("emailexists")]
+        public async Task<ActionResult<bool>> CheckEmailExistsAsync([FromQuery] string email)
+        {
+            return await _userManager.FindByEmailAsync(email) != null;
+        }
+
+        [HttpGet("address")]
+        [Authorize]
+        public async Task<ActionResult<Address>> GetUserAddress()
+        {
+            // gets user's email from token
+            var email = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
+            var user = await _userManager.FindByEmailAsync(email);
+
+            return user.Address;
         }
 
 
@@ -67,5 +104,6 @@ namespace API.Controllers
                 Token = tokenService.CreateToken(user)
             };
         }
+
     }
 }
